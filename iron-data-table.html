@@ -509,6 +509,11 @@ inspired styles to your `iron-data-table`.
         }.bind(this));
       },
 
+      clearColumnsCache: function() {
+        this.set('columns', this.getContentChildren('[select=data-table-column]'));
+        this.clearCache();
+      },
+
       _stopPropagation: function(e) {
         e.stopImmediatePropagation();
       },
